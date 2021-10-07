@@ -1,7 +1,7 @@
 
-import PhoneForm from "./todo/PhoneForm";
-import PhoneList from "./todo/PhoneList";
-import Header from "./todo/Header";
+import PhoneForm from "./phone/PhoneForm";
+import PhoneList from "./phone/PhoneList";
+import Header from "./phone/Header";
 import "./App.css";
 
 
@@ -13,9 +13,10 @@ function App() {
 
     <div className="App" >
       <div id="container" >
+      <PhoneForm />
         <Header />
         <PhoneList />
-        <PhoneForm />
+    
       </div>
     </div>
   )

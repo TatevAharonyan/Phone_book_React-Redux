@@ -23,7 +23,7 @@ function PhoneForm() {
 
     const formSubmit = e => {
         e.preventDefault();
-        if (firstName !== "" || (lastName !== "" && phoneNumber !== "")) {
+        if ((firstName !== "" && firstName.length <= 15) || ((lastName !== "" && lastName.length <= 15) && phoneNumber !== "")) {
             e.preventDefault();
             store.dispatch({ type: "ADD", payload:{ firstName:firstName, lastName: lastName, phoneNumber:phoneNumber} })
             setFirstName("");
@@ -33,16 +33,24 @@ function PhoneForm() {
     }
 
     return (
-        <form onSubmit={formSubmit} className="form" >
+     
+        
+        <form onSubmit={formSubmit} className="form_all" >
+        <h4>Add new contact</h4>
+        <div className = "form">
             <input
                 type="text" value={firstName}
                 placeholder = "first name"
+                pattern="^[a-zA-Zа-яА-Я]+$"
+                title="the field must contain only letters no more than 15"
                 onChange={changeInputFirstName}
                 
             />
                <input
                 type="text" value={lastName}
                 placeholder = "last name"
+                pattern="^[a-zA-Zа-яА-Я]+$"
+                title="the field must contain only letters no more than 15"
                 onChange={changeInputLastName}
                 
             />
@@ -56,6 +64,7 @@ function PhoneForm() {
             />
 
             <button type="submit"> Add </button>
+            </div>
         </form>
     )
 }
