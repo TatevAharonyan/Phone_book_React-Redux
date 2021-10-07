@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding: 5px;
+  background-color: rgba(132, 132, 133, 0.452);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: stretch;
+  width: 60%;
+  height: 70%;
+  background-color:white;
+  margin: 15px;
+}
+
+
+.header {
+  width: 100%;
+  height: 10%;
+  background-color:  rgba(202, 27, 27, 0.212);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.header p {
+  padding: 0 20px;
+  font-weight: 500;
+}
+
+.header_p {
+  width: 200px;
+}
+
+.list {
+  width:100%;
+  display: inline-block;
+  height: 74%;
+  background-color: transparent;
+  overflow-y: scroll;
+}
+  
+
+
+.item {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: auto;
+  padding: 10px;
+  margin: 0 0 0 5px;
+  /* color:grey; */
+  text-align: center;
+  border-bottom: solid 1px rgba(43, 42, 42, 0.1) ;
+  box-shadow: 0 3px 1px rgba(88, 88, 88, 0.1);
+ 
+}
+
+.item p {
+  width: 180px;
+}
+
+.edit_input {
+  margin: 3px auto;
+  width: 130px;
+  text-align: center;
+  font-size: 18px;
+  /* height: 98%; */
+  outline: none;
+  border: none;
+  border-bottom: 1px solid grey;
+  color: rgb(66, 64, 64);
+}
+
+@keyframes text_animetion {
+  from {
+      width:50%;
+  }
+ 
+  to {
+      width:100%;
+  }
+}
+
+.form {
+  width: 100%;
+  height: 15%;
+  padding: 3px;
+  background-color: rgba(202, 27, 27, 0.212);
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.form input {
+  display: flex;
+  margin: 3px auto;
+  width: 90%;
+  /* height: 98%; */
+  outline: none;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  background-color:rgba(136, 133, 135, 0.034);
+}
+
+.form button {
+  border: none;
+  background-color:transparent;
+  font-size: 20px;
+  right: 10px;
+  cursor: pointer;
+  color:rgba(39, 39, 39, 0.897);
+}
+
+.form button:hover {
+  color : rgba(88, 88, 90, 0.452);
+}
+
+/* .check_false   */
+.num{
+  width: 25px;
+  font-size: 25px;
+}
+
+.context {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+.delete_item:hover {
+color:red;
+font-size: 110%;
+cursor: pointer;
+}
+
+.delete_edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 60px;
+  height: 30px;
+  font-weight: 700;
+}
+
+.edit_item:hover {
+  color: #17dd32;
+font-size: 110%;
+cursor: pointer;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background:transparent;
+}
+::-webkit-scrollbar-thumb{
+  background: rgba(202, 27, 27, 0.212);
+  border-radius: 5px;
+}
+
+@media (max-width: 1200px){
+  #container {
+      width: 65%;
+  }
+}
+@media  (max-width: 1000px){
+  #container {
+      width: 70%;
+  }
+}
+
+@media (max-width: 850px){
+  #container {
+      width:  80%;
+  }
+}
+
+@media  (max-width: 650px){
+  #container {
+      width: 90%;
+  }
+}
+
+@media  (max-width: 500px){
+  #container {
+      width: 450px;
+  }
+.form {
+  height: 30%;
+  flex-direction: column;
+}
+
+.context {
+  flex-direction: column;
+}
+
+.context p {
+  margin: 3px auto;
+}
+
+}
